@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Roboto:ital,wght@1,100&family=Single+Day&display=swap');
+
+body {
+background-color: burlywood;
+margin: 0;
+padding: 0;
+}
+
+.App{
+  display: flex;
+
+}
+.div1{
+  display: flex;
+  background-image: url("backImg.png");
+  flex-direction: column-reverse;
+  width:50%;
+  height:100vh;
+  background-size: auto;
+  background-size: 100% 100%;
+ 
+}
+.div2{
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+  background-color: black;
+}
+.heading{
+
+  align-items: flex-end;
+  color:white;
+  /* margin-top:520px; */
+  padding-left: 60px;
+  font-size: 50px;
+  padding-bottom: 20px;
+  
+}
+.alpha,.clk{
+  color:white;
+  font-family: 'DM Sans', sans-serif;
+  /* margin-top: 10px; */
+  align-items:center ;
+
+}
+.appName{
+  color:#72DB73;
+  font-family: 'Single Day', cursive;
+  margin-left: 15px;
+}
+
+.container{
+margin: auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+
+.err{
+  color: red;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+.divS{
+margin: 10px 0;
+}
+.divT{
+  margin: 10px 0;
+}
+.divf{
+  margin: 10px 0 ;
+}
+.divl{
+  margin: 10px 0;
+}
+.in{
+  /* color:#7C7C7C; */
+  color: #b29f9f;
+  background-color: #3f3c3c;
+  height: 40px;
+  width: 500px;
+}
+.sp{
+  padding-right: 200px;
+  
+}
+.btn{
+  width: 510px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #72DB73;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.psg{
+  color: white;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+  font-family: 'Roboto', sans-serif;
+}
+.psg1{
+  color: #72DB73;
+  letter-spacing: 1.5px;
+  font-family: 'Roboto', sans-serif;
+}
+.spl{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  letter-spacing: 1.5px;
+}
