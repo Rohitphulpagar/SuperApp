@@ -1,18 +1,24 @@
 
 import React from "react";
-import Registeration from "./registerationPage/registeration";
+import Registeration from "./Registeration";
 import "./style.css"
+import { Route, Routes } from "react-router-dom";
+import Seconds from "./Seconds";
 
 function App() {
   return (
-    <div className="App">
-      <div className="div1">
-        
-      <h1 className="heading">Discover new things on Superapp</h1> 
-        </div>
-    <div className="div2">
-    <Registeration />
-    </div>
+    
+    <div className="Apps">
+ <Routes>
+  <Route path="/" element={<Registeration/>}></Route>
+ </Routes>
+  
+ <Routes>
+  <Route path="/Seconds" element={<Seconds/>}></Route>
+ </Routes>
+    
+      
+ 
       </div>
   );
 }

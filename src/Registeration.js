@@ -1,24 +1,32 @@
-
-import { useState } from "react";
-import "../style.css";
+import React from "react";
+import Seconds from "./Seconds";
+import "./style.css";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 function Registeration() {
+  const navigate=useNavigate();
   const {
     register,
     formState: { errors },
     handleSubmit,
   } = useForm();
  
+  
 localStorage.setItem("name","KK Vinay");
 localStorage.setItem("email","Vinay090@gmail.com");
 localStorage.setItem("userName","vinay060");
 localStorage.setItem("mobile","96555555");
-  const onSubmit = (data)=>console.log(data);
+ const onSubmit = (data)=>console.log(data);
 
   return (
-    <>
-      <form method="post" onSubmit={handleSubmit(onSubmit)}>
+    <div className="App">
+    <div className="div1">
+        
+        <h1 className="heading">Discover new things on Superapp</h1> 
+              </div>
+          <div className="div2">
+      <form  onSubmit={handleSubmit(onSubmit)}>
         <div className="container">
           <div>
             <h1 className="appName">Super app</h1>
@@ -99,9 +107,12 @@ localStorage.setItem("mobile","96555555");
           </span>
           <br></br>
           <div>
-            <button  type="submit" className="btn">
-              SIGN UP
-            </button>
+           
+  
+  <button className="btn" onClick={()=>navigate("/Seconds")} >
+     SIGN UP
+   </button>
+
             <br />
             <br />
             <span>
@@ -126,13 +137,14 @@ localStorage.setItem("mobile","96555555");
                   {" "}
                   Privacy <br />
                   &nbsp;&nbsp;policy
+          
                 </span>
               </span>
             </div>
           </div>
         </div>
       </form>
-    </>
+    </div></div>
   );
 }
 
