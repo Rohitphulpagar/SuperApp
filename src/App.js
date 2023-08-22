@@ -1,9 +1,10 @@
 
 import React from "react";
 import Registeration from "./Registeration";
+import HomePage from "./HomePage"
 import "./style.css"
 import { Route, Routes } from "react-router-dom";
-import Seconds from "./Seconds";
+import CategoryPage from "./CategoryPage";
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
  </Routes>
   
  <Routes>
-  <Route path="/Seconds" element={<Seconds/>}></Route>
+  <Route path="/CategoryPage" element={<CategoryPage/>}></Route>
  </Routes>
-    
+ <Routes>
+  <Route path="/HomePage" element={<HomePage/>}></Route>
+ </Routes>
       
  
       </div>

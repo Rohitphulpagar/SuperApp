@@ -1,22 +1,41 @@
-import React from "react";
-import Seconds from "./Seconds";
+import React, { useRef, useState } from "react";
+import CategoryPage from "./CategoryPage";
 import "./style.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 function Registeration() {
-  const navigate=useNavigate();
+  
   const {
-    register,
-    formState: { errors },
     handleSubmit,
   } = useForm();
- 
-  
-localStorage.setItem("name","KK Vinay");
-localStorage.setItem("email","Vinay090@gmail.com");
-localStorage.setItem("userName","vinay060");
-localStorage.setItem("mobile","96555555");
+  const[check,setCheck]=useState(false)
+  const changer4=(event)=>{ setCheck(true);
+  }
+ const[enterName,setEnterName]=useState("");
+const changer=(event)=>{ setEnterName(event.target.value);
+}
+const[enterUser,setenterUser]=useState("");
+const changer1=(event)=>{ setenterUser(event.target.value);
+}
+const[enterEmail,setenterEmail]=useState("");
+const changer2=(event)=>{ setenterEmail(event.target.value);
+}
+const[enterMobile,setenterMobile]=useState("");
+const changer3=(event)=>{ setenterMobile(event.target.value);
+}
+
+  const data=useRef();
+  const data1=useRef();
+  const data2=useRef();
+  const data3=useRef();
+  const handleClick=()=>{
+    localStorage.setItem("name",data.current.value)
+    localStorage.setItem("userName",data1.current.value)
+    localStorage.setItem("email",data2.current.value)
+    localStorage.setItem("Mobile",data3.current.value)
+  }
+
  const onSubmit = (data)=>console.log(data);
 
   return (
@@ -26,23 +45,25 @@ localStorage.setItem("mobile","96555555");
         <h1 className="heading">Discover new things on Superapp</h1> 
               </div>
           <div className="div2">
-      <form  onSubmit={handleSubmit(onSubmit)}>
+      <form  onSubmit={handleSubmit(onSubmit)}>  
         <div className="container">
           <div>
             <h1 className="appName">Super app</h1>
             <p className="alpha">Create your new account</p>
           </div>
           <div className="divf">
-            <input
+            <input 
               type="text"
               className="in"
               name="name"
+              value={enterName}
               placeholder="Name"
-              {...register("name", { required: true })}  
+              onChange={changer}
+               ref={data}
             />
             <br />
             <error className="err">
-              {errors.name?.type === "required" && "Field is required"}
+              {!enterName? <span className="err">Field is required</span>:null}
             </error>
           </div>
           <div className="divS">
@@ -50,12 +71,14 @@ localStorage.setItem("mobile","96555555");
               className="in"
               type="text"
               name="userName"
+              value={enterUser}
               placeholder="UserName"
-              {...register("userName", { required: true })}
+              onChange={changer1}
+               ref={data1}
             />
             <br />
             <error className="err">
-              {errors.userName?.type === "required" && "Field is required"}
+            {!enterUser? <span className="err">Field is required</span>:null}
             </error>
           </div>
           <div className="divT">
@@ -63,16 +86,16 @@ localStorage.setItem("mobile","96555555");
               className="in"
               type="email"
               name="email"
+              value={enterEmail}
+              onChange={changer2}
               placeholder="Email"
-              {...register("email", {
-                required: true,
-                pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i,
-              })}
+               
+                // {...pattern= /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i}
+                ref={data2}
             />
             <br />{" "}
             <error className="err">
-              {errors.email?.type === "required" && "Field is required"}
-              {errors.email?.type === "pattern" && "Field is required"}
+            {!enterEmail? <span className="err">Field is required</span>:null}
             </error>
           </div>
           <div className="divl">
@@ -80,12 +103,14 @@ localStorage.setItem("mobile","96555555");
               className="in"
               type="number"
               name="mobileNumber"
+              value={enterMobile}
               placeholder="Mobile"
-              {...register("mobileNumber", { required: true })}
+              onChange={changer3}
+               ref={data3}
             />
             <br />
             <error className="err">
-              {errors.mobileNumber?.type === "required" && "Field is required"}
+            {!enterMobile? <span className="err">Field is required</span>:null}
             </error>
           </div>{" "}
           <br />{" "}
@@ -93,25 +118,26 @@ localStorage.setItem("mobile","96555555");
             <input
               type="checkbox"
               name="checkbox"
-              {...register("checkbox", { required: true })}
+              value={check}
+              onChange={changer4}
             />
             <label className="clk">
               {" "}
               Share my registration data with Superapp{" "}
             </label>
             <br />
-            <error className="err">
-              {errors.checkbox?.type === "required" &&
-                " Check this box if you want to proceed"}
+            <error className="err"> {!check? <span className="err">Check this box if you want to proceed</span>:null}
+              
             </error>
           </span>
           <br></br>
           <div>
            
-  
-  <button className="btn" onClick={()=>navigate("/Seconds")} >
+   <Link to="/CategoryPage">
+  <button className="btn" disabled={!(enterMobile,enterEmail,enterName,enterUser,check)}  onClick={handleClick} >
      SIGN UP
    </button>
+  </Link>
 
             <br />
             <br />
