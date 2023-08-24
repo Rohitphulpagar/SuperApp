@@ -27,6 +27,7 @@ display: flex;
 
 .Sign{
     display: flex;
+    flex-direction: column;
     height: 70vh;
     width: 70vw;
    background-color: red;
@@ -53,8 +54,10 @@ width:15vw;
     margin-left:20px ;
 }
 .localData{
-height:60vh;
-width: 25vw;;
+height:40vh;
+width: 17vw;
+padding-right: 20px;
+
 }
 .info1{
     color:white;
@@ -82,9 +85,12 @@ letter-spacing: 1px;
     
 }
 .texts{
-    height: 60vh;
-    width: 20vw;
-    background-color: chartreuse;
+    margin-left: 40px;
+    margin-top: 15px;
+    height: 20vh;
+    width: 30vw;
+    border-radius: 20px;
+    
 }
 .timers{
    
@@ -152,4 +158,70 @@ border-radius: 20px;
     margin-left: 20px;
     border-radius: 20px;
         
+    }
+    .cardD{
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        background-color: #FF4ADE;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        height:30px;
+        padding-top: 5px;
+       
+    }
+    .cardD1{
+        display: flex;
+        
+        height: 15vh;
+        width: 30vw;
+       border-bottom-left-radius: 20px;
+       border-bottom-right-radius: 20px;
+        background-color:   #101744;
+    }
+    .temp{
+        color:white;
+        font-size: 50px;
+        font-family: 'roboto';
+        margin-left: 60px;
+        
+    }
+    .preimg{
+        height:20px;
+        width: 15px;
+        margin-left: 20px;
+        margin-top: 10px;
+      
+    }
+    .press{
+        display: flex;
+        margin-left: 40px;
+        color: white;
+    }
+    .ps{
+       padding-left: 10px;
+       margin-bottom: 50px;
+    }
+    .cloudText{
+        color: white;
+    }
+    .cardD2{
+        margin-left: 40px;
+        margin-top: 10px;
+    }
+    .press1{
+        display: flex;
+        margin-left: 20px;
+    }
+    .ps1{
+        padding-left: 10px;
+        margin-top:10px ;
+        color: white;
+     }
+     .preimg1{
+        height:20px;
+        width: 15px;
+        margin-left: 20px;
+        margin-top: 15px;
+      
     }

@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import CategoryPage from "./CategoryPage";
 
 function App() {
+ 
   return (
     
     <div className="Apps">
@@ -18,7 +19,7 @@ function App() {
   <Route path="/CategoryPage" element={<CategoryPage/>}></Route>
  </Routes>
  <Routes>
-  <Route path="/HomePage" element={<HomePage/>}></Route>
+  <Route path="/HomePage" element={<HomePage />}></Route>
  </Routes>
       
  
