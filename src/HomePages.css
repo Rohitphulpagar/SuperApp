@@ -21,19 +21,35 @@ display: flex;
 .second{
     height:100vh;
     width:30vw;
-    background-color: aquamarine;
+    background-color: black;
 }
 
 
 .Sign{
     display: flex;
-    flex-direction: column;
-    height: 70vh;
+    height: 68vh;
     width: 70vw;
-   background-color: red;
+   background-color: black;
+}
+.sign1{
+    display: flex;
+    flex-direction: column;
+    height:65vh;
+    width: 70vh;
+    margin-left: 50px;
+}
+.sign2{
+    display:inline-block ;
+    height: 63vh;
+    width: 50vh;
+    margin-left: 60px;
+    margin-top: 20px;
+    background-color: #F1C75B;
+    border-radius: 20px;
+    
 }
 .infos{
-    margin-top: 30px;
+    margin-top: 20px;
     margin-left: 40px;
     display: flex;
     height: 40vh;
@@ -85,8 +101,9 @@ letter-spacing: 1px;
     
 }
 .texts{
+    
     margin-left: 40px;
-    margin-top: 15px;
+    margin-top: 20px;
     height: 20vh;
     width: 30vw;
     border-radius: 20px;
@@ -94,9 +111,9 @@ letter-spacing: 1px;
 }
 .timers{
    
-    height: 30vh;
+    height: 32vh;
     width: 70vw;
-    background-color: rgb(226, 171, 43);
+    background-color: black;
     
 }
 .sp1{
@@ -201,9 +218,11 @@ border-radius: 20px;
     .ps{
        padding-left: 10px;
        margin-bottom: 50px;
+       font-family: 'roboto';
     }
     .cloudText{
         color: white;
+        font-family: 'roboto';
     }
     .cardD2{
         margin-left: 40px;
@@ -217,6 +236,7 @@ border-radius: 20px;
         padding-left: 10px;
         margin-top:10px ;
         color: white;
+        font-family: 'roboto';
      }
      .preimg1{
         height:20px;
@@ -225,3 +245,160 @@ border-radius: 20px;
         margin-top: 15px;
       
     }
+   .notes{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: 'roboto';
+    font-weight: bold;
+    font-size: 45px;
+   }
+   .scrollbar {
+       scrollbar-color:#f1c75b;
+      scrollbar-base-color: #F1C75B;
+      scrollbar-arrow-color: #F1C75B;
+    display: inline-block;
+    width: 270px;
+     height: 366px;
+    overflow-y: scroll;
+     background-color: #F1C75B;
+     color: black;
+     /* text-align:justify; */
+     margin-left: 40px;
+     font-family: 'roboto';
+    border: 2px solid #F1C75B;
+    outline: #F1C75B;
+}
+.cardsS{
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 600px;
+    width: 400px;
+    border: 4px solid white;
+    border-top: 4px solid white;
+    /* border-radius: 20px; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.homes{
+    display: flex;
+margin-left: 250px;
+    flex-direction: column-reverse;
+}
+.browse{
+    margin-top: 30px;
+    height: 40px;
+    width: 140px;
+    background-color: #148A08;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.clock{
+    display: flex;
+    margin-left: 90px;
+    height:27vh;
+    width:57vw;
+    border-radius: 20px;
+    background-color: white;
+    background-color: #1E2343;
+
+}
+.inputs{
+    display: flex;
+    height: 100px;
+    width: 10px;
+    margin: 20px;
+    border: none;
+}
+.inp1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:90px;
+    width: 100px;
+    font-size: 80px;
+    margin-right: 10px;
+    font-family: "roboto";
+    font-weight: bold;
+    color: white;
+    border:none;
+    background-color: #1E2343;
+}
+.inp2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:90px;
+    width: 100px;
+    font-size: 80px;
+    margin-right: 10px;
+    font-family: "roboto";
+    font-weight: bold;
+    color: white;
+    border: none;
+    background-color: #1E2343;
+}
+.inp3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:90px;
+    width: 100px;
+    font-size: 75px;
+    font-family: "roboto";
+    font-weight: bold;
+    color: white;
+    border:none;
+    background-color: #1E2343;
+}
+.clock1{
+    display: flex;
+    width: 38vw;
+    margin-left: 10px;
+}
+.coundown{
+    background-color: #1E2343;
+   width: 24vw;
+   height: 2vh;
+   margin-bottom:5px ;
+   margin-top: 5px;
+   margin-left: 27px;
+   color: white;
+   font-size: 30px;
+
+}
+.times{
+    color: white;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+.buttons{
+  
+   margin-top: 155px;
+   margin-left: 5px;
+    
+}
+.buttonss{
+display: flex;
+  
+
+}
+.buttons11{
+    margin-right: 8px;
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    color: white;
+    background-color: #FF6A6A;
+}
+.buttons22{
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    color: white;
+    background-color: #FF6A6A;
+}
+
+
