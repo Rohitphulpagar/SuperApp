@@ -12,6 +12,7 @@ import Moment from "react-moment";
 import moment from "moment";
 import Wind from "./img/wind.png";
 import Pressure from "./img/pressure.svg";
+import { Link } from "react-router-dom";
 const {Meta}=Card;
 //2d6a1d2fed8821fce7bc60d99c2c1c5a
 //https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API key}
@@ -276,8 +277,8 @@ return(
 )
       })}
       <div className="homes">
-
-  <button className="browse">Browse</button>
+<Link to="./BrowseEntertainment">
+  <button className="browse">Browse</button></Link>
       </div>
 
       </div>
