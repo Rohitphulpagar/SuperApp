@@ -7,9 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import CategoryPage from "./CategoryPage";
 
 function App() {
- 
   return (
-    
     <div className="Apps">
  <Routes>
   <Route path="/" element={<Registeration/>}></Route>
