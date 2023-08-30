@@ -61,7 +61,6 @@ function CategoryPage() {
     setIsShown8((current) => !current);
     localStorage.setItem("Fiction", "Fiction");
   };
- 
 
   return (
     <div className="s1">

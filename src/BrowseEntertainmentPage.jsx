@@ -3,7 +3,7 @@ import "./browses.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import logos from "./img/logos.svg";
-import CategoryPage from "./CategoryPage"
+import CategoryPage from "./CategoryPage";
 function BrowseEntertainmentPage() {
   const [movieList, setMovieList] = useState([]);
   const [genreList, setGenreList] = useState([]);
@@ -48,7 +48,17 @@ function BrowseEntertainmentPage() {
     localStorage.getItem("Fiction"),
   ].filter(Boolean);
 
-  const genresIdNum = {Drama: 18,Action: 28,Fiction: 878,Music: 10402,Horror: 27,Fantasy: 14,Western: 37,Thriller: 53,Romance: 10749,};
+  const genresIdNum = {
+    Drama: 18,
+    Action: 28,
+    Fiction: 878,
+    Music: 10402,
+    Horror: 27,
+    Fantasy: 14,
+    Western: 37,
+    Thriller: 53,
+    Romance: 10749,
+  };
 
   return (
     <div className="containAll">
@@ -69,8 +79,8 @@ function BrowseEntertainmentPage() {
             movie.genre_ids.includes(genresIds)
           );
 
-              return (
-          <div className="posterCard">
+          return (
+            <div className="posterCard">
               <h2 className="genresNames">{selectedGenre}</h2>
               <div className="movie-posters">
                 {genreMovies.slice(0, 3).map((movie) => (
@@ -84,11 +94,10 @@ function BrowseEntertainmentPage() {
             </div>
           );
         })}
-        <div className="lastDiv">
-<Link to="/CategoryPage">
-
-        <button className="browseButton">Browse</button>
-</Link>
+        <div className="lastsDiv">
+          <Link to="/CategoryPage">
+            <button className="browseButton">Browse</button>
+          </Link>
         </div>
       </div>
     </div>
