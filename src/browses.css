@@ -62,7 +62,7 @@ body {
   width: 120px;
   color: #ffffff;
 }
-.lastDiv {
+.lastsDiv {
   display: flex;
   justify-content: end;
   margin-right: 40px;

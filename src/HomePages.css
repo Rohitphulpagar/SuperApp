@@ -10,13 +10,10 @@ body{
 display: flex;
 
 }
-
 .first{
     height: 100vh;
     width: 70vw;
- 
-    
-    
+
 }
 
 .second{
@@ -24,8 +21,6 @@ display: flex;
     width:30vw;
     background-color: black;
 }
-
-
 .Sign{
     display: flex;
     height: 68vh;
@@ -111,7 +106,6 @@ letter-spacing: 1px;
     
 }
 .timers{
-   
     height: 32vh;
     width: 70vw;
     background-color: black;
@@ -132,10 +126,9 @@ border-radius: 20px;
 }
 .s{
     margin-top: 20px;
-    
+
 }
 .sp2{
-    
         display: inline-block;
         margin-top: 10px;
         color: white;
@@ -359,7 +352,7 @@ margin-left: 250px;
     width: 38vw;
     margin-left: 10px;
 }
-.coundown{
+.coundowns{
     background-color: #1E2343;
    width: 24vw;
    height: 2vh;
