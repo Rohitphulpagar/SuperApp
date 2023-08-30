@@ -5,14 +5,13 @@ import HomePage from "./HomePage"
 import "./style.css"
 import { Route, Routes } from "react-router-dom";
 import CategoryPage from "./CategoryPage";
-import BrowseEntertainment from "./BrowseEntertainment"
+import BrowseEntertainmentPage from "./BrowseEntertainmentPage";
 function App() {
   return (
     <div className="Apps">
  <Routes>
   <Route path="/" element={<Registeration/>}></Route>
  </Routes>
-  
  <Routes>
   <Route path="/CategoryPage" element={<CategoryPage/>}></Route>
  </Routes>
@@ -20,7 +19,7 @@ function App() {
   <Route path="/HomePage" element={<HomePage />}></Route>
  </Routes>
  <Routes>
-  <Route path="/BrowseEntertainment" element={<BrowseEntertainment />}></Route>
+  <Route path="/BrowseEntertainmentPage" element={<BrowseEntertainmentPage />}></Route>
  </Routes>
  
       </div>

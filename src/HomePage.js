@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { useEffect, useState } from "react";
+import BrowseEntertainmentPage from "./BrowseEntertainmentPage";
 import manpic from "./img/manpic.png";
 import "./HomePages.css";
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
@@ -47,7 +48,7 @@ function HomePage() {
   const fetchData = (data) => {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=2d6a1d2fed8821fce7bc60d99c2c1c5a"
-      // "https://api.openweathermap.org/data/2.5/weather?q={mumbai}&appid={2d6a1d2fed8821fce7bc60d99c2c1c5a}"
+      
     )
       .then((res) => {
         return res.json();
@@ -68,8 +69,7 @@ function HomePage() {
   useEffect(() => {
     fetchData();
   }, []);
- // https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=061e32d59e5a451aa4dc83968cc3ec45
- // https://gnews.io/api/v4/{endpoint}?apikey=
+ 
 const [pair,setPair]=useState("");
 const [urlToImage,setUrlToImage]=useState([0]);
   const [news,setNews]=useState([]);
@@ -206,12 +206,13 @@ This is how I am going to learn MERN Stack in next 3 months.
         <div className="clock1">
       <div className="coundown">
         <CountdownCircleTimer  className="coundown1"
-          key={totalSeconds} 
+          
           isPlaying={isRunning}
           duration={totalSeconds}
           colors={[
-            ["#FF5733", 0.33]
+            ["#FF6A6A"]
           ]}
+          colorsTime={[totalSeconds]}
         >
           {({ remainingTime }) => {
             const hrs = Math.floor(remainingTime / 3600);
@@ -229,21 +230,21 @@ This is how I am going to learn MERN Stack in next 3 months.
           type="number"
           value={hours}
           onChange={(e) => setHours(parseInt(e.target.value))}
-          placeholder="Hours"
+          placeholder="0"
         /></div>
         <div><p className="times">Minutes</p>
         <input className="inp2"
           type="number"
           value={minutes}
           onChange={(e) => setMinutes(parseInt(e.target.value))}
-          placeholder="Minutes"
+          placeholder="0"
         /></div>
         <div><p className="times">Seconds</p>
         <input className="inp3"
           type="number"
           value={seconds}
           onChange={(e) => setSeconds(parseInt(e.target.value))}
-          placeholder="Seconds"
+          placeholder="0"
         />
         </div></div>
         <div className="buttons">
@@ -277,8 +278,9 @@ return(
 )
       })}
       <div className="homes">
-<Link to="./BrowseEntertainment">
-  <button className="browse">Browse</button></Link>
+<Link to="/BrowseEntertainmentPage">
+  <button className="browse">Browse</button>
+  </Link>
       </div>
 
       </div>

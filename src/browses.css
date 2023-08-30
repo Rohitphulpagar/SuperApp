@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Roboto:ital,wght@1,100&family=Single+Day&display=swap');
+
+
+body{
+    margin:0;
+    padding: 0;
+    background-color: black;
+}
+.containAll{
+    background-color: black;
+    margin: 0;
+    margin-top: 0px;
+    padding-top: 0;
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+   
+}
+.headNames{
+    color: #72DB73;
+    font-family: "single day";
+    font-weight: bold;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.imgs{
+    margin-right: 10px;
+    height: 60px;
+    padding-top: 10px;
+}
+.nameAcc{
+    color: white;
+    font-family: 'roboto';
+    margin-left: 20px;
+}
+.genresNames{
+    color:#878787;
+    font-family: "roboto";
+    margin-left: 18px;
+    margin-top: 10px;
+}
+.posterCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.moviesPoster{
+    display: inline-block;
+ margin: 20px;
+    height:220px;
+    width: 450px;
+    border-radius: 20px;
+    border:2px solid #878787;
+}
+
+.browseButton{
+    background-color:#72DB73;
+    font-size: 22px;
+    border-radius: 20px;
+    height: 50px;
+    width: 120px;
+    color: #ffffff;
+}
+.lastDiv{
+    display: flex;
+    justify-content: end;
+    margin-right: 40px;
+    padding-bottom:  10px;
+}
