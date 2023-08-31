@@ -66,32 +66,28 @@ function HomePage() {
   useEffect(() => {
     fetchData();
   }, []);
+  
+//news api section
+  const [newsData, setNewsData] = useState([]);
+  const [error, setError] = useState(null);
 
-  // " https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=061e32d59e5a451aa4dc83968cc3ec45"
-  const [pair, setPair] = useState("");
-  const [urlToImage, setUrlToImage] = useState([0]);
-  const [news, setNews] = useState([]);
-  const [author, setAuthor] = useState("");
-  const [description, setDescription] = useState([0]);
   useEffect(() => {
-   
-    const loadNews = async () => {
-      const response = await axios.get(
-        "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=061e32d59e5a451aa4dc83968cc3ec45"
-      );
-      setNews(response.data.articles);
-      setDescription(response.description);
-      setAuthor(response.author);
-      setPair(response.data.articles);
-    };
-    loadNews();
-    //https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=061e32d59e5a451aa4dc83968cc3ec45
-  }, []);
-  console.log("news", news);
+    const url =
+      "https://gnews.io/api/v4/top-headlines?category=general&lang=en&country=us&max=10&apikey=91067522ba3e46656d868a5a21182601";
 
-  for (let pair of Object.entries(news)) {
-    console.log(pair);
-  }
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setNewsData(data.articles);
+        console.log(data.articles);
+      } catch (error) {
+        setError(error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -270,15 +266,15 @@ function HomePage() {
       </div>
 
       <div className="second">
-        {pair &&
-          pair.slice(1, 2).map((item, index, arr) => {
+        {newsData &&
+          newsData.slice(2, 3).map((article, index) => {
             return (
               <Card
                 key={index}
                 className="cardsS"
-                cover={<img alt="imagess" src={item.urlToImage} />}
+                cover={<img alt="imagess" src={article.image} />}
               >
-                <Meta title={item.title} description={item.description} />
+                <Meta title={article.title} description={article.description} />
               </Card>
             );
           })}
